@@ -11,22 +11,18 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Rows and columns in Flutter',
+            'Rows and columns in  Flutter',
             style: TextStyle(fontSize: 30, color: Colors.redAccent),
           ),
           centerTitle: true,
         ),
-        body: Center(
-          child: Container(
-            margin: EdgeInsets.all(10),
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black54),
-            ),
-            child: Text(
-              'Rows and column widgets explained',
-              style: TextStyle(fontSize: 20),
-            ),
+        body: Container(
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
+
+          child: Text(
+            'Both Row and Column widgets take a list of widgets as their children, which are then arranged according to the widget\'s orientation.\nMainAxisAlignment: This property determines how the children are aligned along the main axis (horizontally for Row, vertically for Column)',
+            style: TextStyle(fontSize: 20),
           ),
         ),
       ),
