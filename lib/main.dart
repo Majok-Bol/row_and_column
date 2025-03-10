@@ -19,10 +19,26 @@ class MyApp extends StatelessWidget {
         body: Container(
           margin: EdgeInsets.all(10),
           padding: EdgeInsets.all(10),
-
-          child: Text(
-            'Both Row and Column widgets take a list of widgets as their children, which are then arranged according to the widget\'s orientation.\nMainAxisAlignment: This property determines how the children are aligned along the main axis (horizontally for Row, vertically for Column)',
-            style: TextStyle(fontSize: 20),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [Text('one'), Text('two'), Text('three')],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [Text('four'), Text('five'), Text('six')],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text('seven'),
+                  Text('eight'),
+                  Text('nine'),
+                  Text('ten'),
+                ],
+              ),
+            ],
           ),
         ),
       ),
